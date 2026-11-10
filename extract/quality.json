@@ -1,0 +1,379 @@
+{
+  "carry_columns": [
+    "award_notice_date"
+  ],
+  "evaluation_contract": {
+    "access": "isolated_rows",
+    "cross_row_audit": {
+      "auxiliary_files_review": "Only the declared train, eval and holdout CSV files are written; no auxiliary evaluation or answer files.",
+      "probes": [],
+      "rationale": "The task is an event-level tabular release with one row per first-year R01 award; identity clustering is handled by evaluation rather than by extra files."
+    },
+    "feature_evidence": {
+      "administering_ic": {
+        "availability": "Printed on the first-year award record at notice; current snapshot supports field meaning but does not prove historical first-year availability.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      },
+      "award_id": {
+        "availability": "Constructed at build time; not a publisher field.",
+        "source": "Constructed stable key from CORE_PROJECT_NUM and PROJECT_START in the first-year ExPORTER record.",
+        "status": "assumed"
+      },
+      "award_notice_date": {
+        "availability": "Printed on the first-year award record at notice; historical first-year availability is assumed from the current publisher documentation, not an archived vintage. Shipped as the declared time/carry column.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      },
+      "direct_cost_amt": {
+        "availability": "Measured in this vintage as populated on the released first-year records, including the pre-FY2012 cohorts; the published FY2012-onward note in the NIH dictionary describes an earlier snapshot of the file contents. Blank remains missing, not zero.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      },
+      "ed_inst_type": {
+        "availability": "Printed on the first-year award record at notice; current snapshot supports field meaning but does not prove historical first-year availability.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      },
+      "indirect_cost_amt": {
+        "availability": "Measured in this vintage as populated on the released first-year records, including the pre-FY2012 cohorts, with only a handful of blank rows; the published FY2012-onward note in the NIH dictionary describes an earlier snapshot of the file contents. Blank remains missing, not zero. Award-level amounts are near-unique, so the column is declared high-cardinality.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      },
+      "multi_pi_count": {
+        "availability": "Derived from the PI identifier list printed on the first-year award record; a missing list remains missing.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      },
+      "org_country": {
+        "availability": "Printed on the first-year award record at notice; historical availability assumed.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      },
+      "org_ipf_code": {
+        "availability": "Printed on the first-year award record at notice; high-cardinality institution identifier; historical availability assumed.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      },
+      "org_state": {
+        "availability": "Printed on the first-year award record at notice and required non-missing for population eligibility; historical availability assumed.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      },
+      "pi_prior_r01_count": {
+        "availability": "Uses only records with AWARD_NOTICE_DATE strictly earlier than the row notice date; a missing PI identifier list remains missing; left-censored before the first downloaded annual file.",
+        "source": "Constructed at build time from earlier R01 award records in the same ExPORTER files.",
+        "status": "assumed"
+      },
+      "project_start_month": {
+        "availability": "Derived from PROJECT_START printed on the first-year award record.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      },
+      "study_section": {
+        "availability": "Review panel field recorded with the award; current snapshot supports field meaning but does not prove historical first-year availability.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      },
+      "total_cost": {
+        "availability": "Printed on the first-year award record at notice; later administrative revisions are possible, so treated as award-time value.",
+        "source": "https://report.nih.gov/exporter-data-dictionary",
+        "status": "assumed"
+      }
+    },
+    "limitations": [
+      "Retrospective snapshot, not a historical operational feed: each annual file reflects the administrative state of records when that file was created, so later revisions, amount changes, no-cost extensions and PI moves appear in the downloaded vintage.",
+      "Historical first-year availability of each field is assumed from the current publisher data dictionary and annual files, not verified against an archived vintage.",
+      "Actual ExPORTER publication timestamps are not established, so timing.observations is empty rather than filled with invented dates.",
+      "PROJECT_END is excluded from features because NIH extends it on renewal; using it would leak the outcome.",
+      "The outcome is partly behavioral: a renewal exists only if the investigator applied, so the label measures continuation of federal funding rather than scientific merit alone and co-moves with appropriations and institute paylines.",
+      "Rows are not independent draws: prolific investigators and large institutions contribute many rows, so cluster-aware evaluation by organization and investigator history is advisable.",
+      "PI identifier values are not perfectly stable over time, so PI histories carry linkage noise.",
+      "Cost amounts: NIH's data dictionary describes direct and indirect cost amounts as available only for awards funded in FY2012 onward, but the current-vintage annual files used here populate the pre-FY2012 population cohorts as well (measured in the last release: no blank direct amounts and only a handful of blank indirect amounts across released rows). The descriptor now follows the measured vintage; blanks still remain missing rather than zero.",
+      "Prior R01 history is left-censored before the first downloaded annual file, so early-cohort prior-count features may undercount older awards.",
+      "The solicitation identifier (OPPORTUNITY_NUMBER, the FOA number) is exposed in every audited annual ExPORTER project file, but it is not shipped: the frozen feature contract for this task is the twelve award-time metadata columns, so omitting the solicitation identifier is a declared scope decision rather than a claim that the publisher files lack the column.",
+      "No label-derived PI or organization renewal-rate feature is shipped; this is a completed check, not an unresolved item.",
+      "The legal basis is U.S. law and territorial: 17 U.S.C. 105 removes U.S. copyright in these agency-compiled records; it is not a worldwide dedication.",
+      "Grantee-supplied text such as abstracts, titles and public health relevance statements is excluded from features and release.",
+      "The discovery-time provenance strings in the frozen source block (its limitations list, its construction.source_examples note and its reason summary) are preserved verbatim from source discovery and are not the operative evaluation descriptor. Two of those sentences describe an earlier snapshot: the claim that direct and indirect cost amounts are blank before FY2012 is superseded by the measured current-vintage statement above, and the phrase describing a roughly balanced label is superseded by the measured roughly eleven percent positive rate. PI identifiers are used only to derive counts and are never shipped. No built row or feature depends on those provenance sentences."
+    ],
+    "selection": {
+      "evidence": "Population and features use fields printed on the first-year award record at award notice; prior-count features use only awards with strictly earlier notice dates.",
+      "kind": "prediction_time"
+    },
+    "training_label_timing": "unverified",
+    "use": "retrospective_research",
+    "vintage": {
+      "evidence": "Annual ExPORTER project files downloaded at build time; later administrative revisions appear in the vintage, so this is not a historical operational feed.",
+      "kind": "current_snapshot"
+    }
+  },
+  "event_key_column": "award_notice_date",
+  "expected_duplicate_ids": 0,
+  "external_threshold": {
+    "source": "Frozen task rule: a competing renewal counts only when BUDGET_START is strictly after initial PROJECT_START and no later than six calendar years after it; the six-year window is not tuned on rows.",
+    "unit": "years",
+    "value": 6
+  },
+  "features": [
+    "administering_ic",
+    "study_section",
+    "ed_inst_type",
+    "org_state",
+    "org_country",
+    "org_ipf_code",
+    "total_cost",
+    "direct_cost_amt",
+    "indirect_cost_amt",
+    "project_start_month",
+    "multi_pi_count",
+    "pi_prior_r01_count"
+  ],
+  "features_documented_at": "prediction_time",
+  "high_cardinality_columns": [
+    "org_ipf_code",
+    "study_section",
+    "indirect_cost_amt"
+  ],
+  "id_columns": [
+    "award_id"
+  ],
+  "label_source_columns": [
+    "CORE_PROJECT_NUM",
+    "APPLICATION_TYPE",
+    "BUDGET_START",
+    "PROJECT_START"
+  ],
+  "measurements": [
+    {
+      "column": "total_cost",
+      "frame": "first-year award record TOTAL_COST, direct plus indirect, as printed at notice; later administrative revisions possible",
+      "unit": "USD"
+    },
+    {
+      "column": "direct_cost_amt",
+      "frame": "first-year award record DIRECT_COST_AMT; blank stays missing",
+      "unit": "USD"
+    },
+    {
+      "column": "indirect_cost_amt",
+      "frame": "first-year award record INDIRECT_COST_AMT; blank stays missing",
+      "unit": "USD"
+    },
+    {
+      "column": "project_start_month",
+      "frame": "calendar month extracted from PROJECT_START",
+      "unit": "month of year"
+    },
+    {
+      "column": "multi_pi_count",
+      "frame": "count of distinct PI identifiers on the first-year record",
+      "unit": "count"
+    },
+    {
+      "column": "pi_prior_r01_count",
+      "frame": "maximum distinct earlier R01 core projects held by any listed PI, using only award records with strictly earlier AWARD_NOTICE_DATE",
+      "unit": "count"
+    }
+  ],
+  "name": "nih-r01-competing-renewal",
+  "positive_label": 1,
+  "post_hoc_columns": [
+    "PROJECT_END",
+    "FY",
+    "SUPPORT_YEAR"
+  ],
+  "split_windows": {
+    "eval": {
+      "end": "2014-10-01T00:00:00.000",
+      "start": "2012-10-01T00:00:00.000"
+    },
+    "holdout": {
+      "end": "2016-10-01T00:00:00.000",
+      "start": "2014-10-01T00:00:00.000"
+    },
+    "train": {
+      "end": "2012-10-01T00:00:00.000",
+      "start": null
+    }
+  },
+  "splits": {
+    "train": "public/train.csv",
+    "eval": "public/eval.csv",
+    "holdout": "private/holdout.csv"
+  },
+  "target": "renewed",
+  "task": {
+    "features": [
+      {
+        "availability": "Printed on the first-year award record at notice; current snapshot supports field meaning but does not prove historical first-year availability.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "Two-character NIH institute or center code administering the award; captures institute-specific continuation norms and paylines.",
+        "name": "administering_ic"
+      },
+      {
+        "availability": "Review panel field recorded with the award; current snapshot supports field meaning but does not prove historical first-year availability.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "Review panel code that evaluated the funded application; proxies field and review culture. The panel name text is not shipped to avoid duplicate text.",
+        "name": "study_section"
+      },
+      {
+        "availability": "Printed on the first-year award record at notice; current snapshot supports field meaning but does not prove historical first-year availability.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "NIH grouping of the grantee organization component type, such as medical school, other college, hospital or business.",
+        "name": "ed_inst_type"
+      },
+      {
+        "availability": "Printed on the first-year award record at notice and required non-missing for population eligibility; historical availability assumed.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "Two-letter grantee business-office state; institutional location and clustering. Required non-missing for population eligibility.",
+        "name": "org_state"
+      },
+      {
+        "availability": "Printed on the first-year award record at notice; historical availability assumed.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "Grantee business-office country; institutional location and foreign or domestic status.",
+        "name": "org_country"
+      },
+      {
+        "availability": "Printed on the first-year award record at notice; high-cardinality institution identifier; historical availability assumed.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "Stable NIH institution identifier for the grantee organization; institutional capacity and high-cardinality identity control.",
+        "name": "org_ipf_code"
+      },
+      {
+        "availability": "Printed on the first-year award record at notice; later administrative revisions are possible, so treated as award-time value.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "First-year total award amount, direct plus indirect; treated as an award-time value because later administrative revisions are possible.",
+        "name": "total_cost"
+      },
+      {
+        "availability": "Measured in this vintage as populated on released first-year records, including pre-FY2012 cohorts; the dictionary note describing availability from FY2012 onward reflects an earlier snapshot of the files. Blank remains missing, not zero.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "First-year direct cost component; indirect share proxies institutional facilities and administrative rate.",
+        "name": "direct_cost_amt"
+      },
+      {
+        "availability": "Measured in this vintage as populated on released first-year records, including pre-FY2012 cohorts, with only a handful of blank rows; the dictionary note describing availability from FY2012 onward reflects an earlier snapshot of the files. Blank remains missing, not zero. Amounts are near-unique per award, so this is a high-cardinality numeric column.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "First-year indirect cost component; proxies institutional facilities and administrative rate.",
+        "name": "indirect_cost_amt"
+      },
+      {
+        "availability": "Derived from PROJECT_START printed on the first-year award record.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "Calendar month of PROJECT_START, giving within-year timing while remaining visible at notice.",
+        "name": "project_start_month"
+      },
+      {
+        "availability": "Derived from the PI identifier list printed on the first-year award record; a missing list remains missing.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "Number of distinct PI identifiers on the first-year record; single-PI versus multi-PI structure.",
+        "name": "multi_pi_count"
+      },
+      {
+        "availability": "Derived only from R01 award records with AWARD_NOTICE_DATE strictly earlier than the row notice date; a missing PI identifier list remains missing.",
+        "evidence_url": "https://report.nih.gov/exporter-data-dictionary",
+        "meaning": "Maximum number of distinct earlier R01 core projects held by any listed PI, measuring established versus first-time R01 holders without using labels.",
+        "name": "pi_prior_r01_count"
+      }
+    ],
+    "outcome_horizon": "Six calendar years from the initial PROJECT_START; a competing renewal counts only when its BUDGET_START is strictly after PROJECT_START and no later than PROJECT_START plus six years. Cohorts through FY2017 are fully observed using annual files through FY2023.",
+    "population": "Extramural R01 awards in the annual NIH ExPORTER project files with APPLICATION_TYPE code 1 (new), SUPPORT_YEAR code 1, ACTIVITY code R01, non-missing PROJECT_START, AWARD_NOTICE_DATE and ORG_STATE, and AWARD_NOTICE_DATE from 2007-10-01 through 2017-09-30 (federal fiscal years 2008-2017). The released splits ship fiscal years 2008-2012 to train, 2013-2014 to eval, and 2015-2016 to holdout; the FY2017 cohort is held back outside the three release files as a post-holdout drift audit. Excludes other application types, contracts with N-prefix codes, intramural Z-prefix codes, and projects whose first-year record is missing. Eligibility uses only fields visible on the award record at the decision instant.",
+    "prediction_time": "The award notice date (AWARD_NOTICE_DATE) printed on the project first-year record, the moment the new award becomes public. Features use only fields printed on that first-year record or histories built from R01 award records with AWARD_NOTICE_DATE strictly earlier than the row notice date.",
+    "question": "When NIH announces a brand-new R01 award, will that project later be continued through a competing-renewal award on the same core project number within six years, or will the project end without one?",
+    "simple_references": "Persistence/majority baseline: each fiscal-year cohort renewal rate, constant per split. Calendar baseline: fiscal-year cohort and project start month. Identity baseline: organization identifier ORG_IPF_CODE and administering institute/review panel. No persistence score column exists in the source; the identity reference uses only shipped entity columns and training-only calendar rates.",
+    "split_policy": "One row per new award; assignment by AWARD_NOTICE_DATE at hard federal fiscal-year boundaries (October 1 through September 30) with no shuffling: train FY2008-FY2012, eval FY2013-FY2014, holdout FY2015-FY2016. FY2017 is held back outside the three release files as a post-holdout drift audit. No calendar embargo is used; every label uses only post-decision records of the same core project, and every prior-count feature uses only records with strictly earlier AWARD_NOTICE_DATE. Right-censoring is enforced by requiring the full six-year window to be observed at the FY2023 cutoff.",
+    "usefulness": "The binary outcome is not stored in any field: it requires reconstructing project continuity across annual support-year records and award types. It is uncommon rather than balanced: in the previously constructed FY2008-FY2017 release roughly 4,300 of 39,875 first-year R01 rows (about one in nine) received a competing renewal inside six years, so a constant negative baseline already reaches about 89 percent accuracy and the signal must be read from ranking and calibration metrics. The outcome still varies across institutes, review panels, organizations and investigator experience, so a model must beat fiscal-year cohort base rates and institutional identity baselines using only award-time metadata, and it must avoid the documented contamination channel in which PROJECT_END is extended on renewal."
+  },
+  "time_column": "award_notice_date",
+  "timing": {
+    "features": {
+      "period": null,
+      "published_days_after_period_end": null,
+      "source_kind": "administrative_record"
+    },
+    "observations": [],
+    "prediction_instant": {
+      "citation": "Award notice date printed on the first-year award record; no historical publication timestamp is inferred.",
+      "days_after_period_end": null,
+      "kind": "event_time",
+      "period": null
+    },
+    "row_selection": {
+      "fields": [
+        "ACTIVITY",
+        "APPLICATION_TYPE",
+        "SUPPORT_YEAR",
+        "PROJECT_START",
+        "AWARD_NOTICE_DATE",
+        "ORG_STATE"
+      ],
+      "rule": "One row per new R01 first support-year award with non-missing required fields; split by AWARD_NOTICE_DATE at hard fiscal-year boundaries; FY2017 is held back outside the three release files."
+    }
+  },
+  "unit_validation": {
+    "checks": 6,
+    "mismatches": 0,
+    "source": "source-checks.json: unit checks",
+    "evidence_sha256": "3317c71fd35286db864a5bedd1bf08656963d430d0ec42df2c8c70902c2b4483"
+  },
+  "positive_events": {
+    "train": {
+      "positives": 2268,
+      "distinct_events": 893
+    },
+    "eval": {
+      "positives": 767,
+      "distinct_events": 352
+    },
+    "holdout": {
+      "positives": 842,
+      "distinct_events": 374
+    }
+  },
+  "adversarial_battery": {
+    "version": "1.0.0",
+    "ok": true,
+    "input_digest": "7270da4ed5d22e834b370091eae6c4efc5ec11eb74ba063a965a4cee08ab47b3",
+    "code": {
+      "artifact_scrub.py": "8c663253e691a7b8751f9c853b40a3752a833360caafb1ea8e8f534e64af4b68",
+      "leakage_battery.py": "adbf7ee0aca0012b78cc1f1e4aeb968a23717cae30f66a02e080215e75f830e3",
+      "recovery_recipes.py": "f64c542fcda232169c95ace17421b45275194b934938c0ea4c9b68e6f844ad0e"
+    },
+    "freeze_sha256": "bc5caa6db21b57d39ec5ea2a0ff39efaa873aeb9e2d54acc70ff4726bbc73981",
+    "all_results_sha256": "ff56771c5ebaba0b0b783608305bf510e97ed16b68859a770b834defde543ed1",
+    "detail_files": {
+      "results-0000.jsonl": {
+        "sha256": "116d90e46d333dfe00a33ecfb3abef64f88beaf29c4cee73c703c791cb623c99",
+        "bytes": 179120
+      }
+    },
+    "exact": [],
+    "failures": [],
+    "flags": [],
+    "flag_count": 0,
+    "attempted": {
+      "heuristic": 80,
+      "statistical": 434,
+      "supervised": 420
+    },
+    "constant_or_uncovered": {
+      "heuristic": 26,
+      "statistical": 102,
+      "supervised": 112
+    },
+    "scope": {
+      "donors": [
+        "self",
+        "all"
+      ],
+      "exploratory_keys": 8,
+      "exploratory_operands": 8,
+      "max_columns": 128,
+      "scored_labels_read": false,
+      "tokens_per_column": 80,
+      "train_labels": "supervised controls only"
+    }
+  }
+}

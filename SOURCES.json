@@ -1,0 +1,128 @@
+{
+  "publisher-terms.snapshot": {
+    "url": "https://uscode.house.gov/us/usc/119-118/t17/s105/",
+    "bytes": 25502,
+    "sha256": "6c5c94cc76c84785ccfd59b4a10d07a92658d66b9e7ae4873d4ea6c07ca939c7",
+    "retrieved_at_unix": 1794290763.2234108,
+    "transport_attempts": 1
+  },
+  "publisher-documentation.snapshot": {
+    "url": "https://report.nih.gov/exporter-data-dictionary",
+    "bytes": 74902,
+    "sha256": "b1572997c288002e68d711e6e1e39d8fc1dbec0d6b50cc3c19d984dac3e79e66",
+    "retrieved_at_unix": 1794290764.392156,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2008.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2008",
+    "bytes": 38115687,
+    "sha256": "343be1269f2b48d6455bd4e2e0db7909dba97ee5159d9c4e793bf852938d63f0",
+    "retrieved_at_unix": 1794290780.5832093,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2009.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2009",
+    "bytes": 48045139,
+    "sha256": "15ee21fd41933358136bbb42af62b7127d756dc53dcd0bcab60553f1d116d5a2",
+    "retrieved_at_unix": 1794290790.6842732,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2010.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2010",
+    "bytes": 48282165,
+    "sha256": "c80563a1856a580102a1cab72e8bebca8c37a3544735e6bd81040c4432a18314",
+    "retrieved_at_unix": 1794290801.7565944,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2011.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2011",
+    "bytes": 46045380,
+    "sha256": "57d8b3b470db8f38c0aed9864f27dbac98abd29c5cd3667755756eab1f1da0c8",
+    "retrieved_at_unix": 1794290811.971103,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2012.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2012",
+    "bytes": 48264275,
+    "sha256": "b25fbd38aa3dcc3db8ef886e94e64fd0fc64152bebf11b4c1dc03661ba764cef",
+    "retrieved_at_unix": 1794290820.9860682,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2013.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2013",
+    "bytes": 32011268,
+    "sha256": "19c5da4fd55ba29db0e88e11ef56280884883b13bba875c77dcf669c299f5566",
+    "retrieved_at_unix": 1794290828.3401086,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2014.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2014",
+    "bytes": 50824351,
+    "sha256": "0af4ecfe3be779c53a861a6ce8920fda482dcbb5ad7c013816257d324d5e50cf",
+    "retrieved_at_unix": 1794290838.347905,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2015.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2015",
+    "bytes": 50200881,
+    "sha256": "e33a90a802d307240a432c7b08b85531d28cc46ff104d04ceb68dc29d8f3c892",
+    "retrieved_at_unix": 1794290851.145553,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2016.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2016",
+    "bytes": 50925211,
+    "sha256": "12467aa328175491d9e3aad6b54a884ca257ebbc39429eaaeb70cd33d2bd042e",
+    "retrieved_at_unix": 1794290864.0557637,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2017.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2017",
+    "bytes": 52876213,
+    "sha256": "dd52b9cb3e93f06400c5caab4e5fb4b19968b216b8db67c56e3698cb06e5fa90",
+    "retrieved_at_unix": 1794290874.3972375,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2018.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2018",
+    "bytes": 38985379,
+    "sha256": "d3cf60e1fa61ca34508e9550a18889a269b087b4095124e73d4a11e1b0a42e01",
+    "retrieved_at_unix": 1794290886.0898094,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2019.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2019",
+    "bytes": 58915943,
+    "sha256": "272f37f5d86ea1b8f3aa775c460188343626cb1a6395ade1cb6315af1e0d5ead",
+    "retrieved_at_unix": 1794290898.4743133,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2020.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2020",
+    "bytes": 62233194,
+    "sha256": "e0b1d49a3dfb4365580e5be82c8dd9b2a802bd131416a98945f866982bcb2e27",
+    "retrieved_at_unix": 1794290922.8519206,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2021.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2021",
+    "bytes": 63338049,
+    "sha256": "aa8c596afa6b2c671e270ae700bf32691e7d5094ceb1130d0af1baeccea94457",
+    "retrieved_at_unix": 1794290938.9376822,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2022.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2022",
+    "bytes": 65876034,
+    "sha256": "5ae867a9ba8b20c00f67b5d96fc890b29eada6331fd1a2d629b639786d3ae1f9",
+    "retrieved_at_unix": 1794290962.60136,
+    "transport_attempts": 1
+  },
+  "exporter_projects_FY2023.zip": {
+    "url": "https://reporter.nih.gov/exporter/projects/download/2023",
+    "bytes": 67964676,
+    "sha256": "dac83610346e0f1d08c5ff763ae813179961faaf4f42c6908ceec407cc04629d",
+    "retrieved_at_unix": 1794290980.4186432,
+    "transport_attempts": 1
+  }
+}

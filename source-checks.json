@@ -1,0 +1,238 @@
+{
+  "checks": [
+    {
+      "check": "Declared release column list is free of duplicate names",
+      "observed": "column count: 15; distinct names: 15",
+      "expected": "Every declared release column name occurs exactly once",
+      "passed": true
+    },
+    {
+      "check": "Declared release columns cover every shipped feature, identifier, time and target name",
+      "observed": "release columns: ['award_id', 'award_notice_date', 'administering_ic', 'study_section', 'ed_inst_type', 'org_state', 'org_country', 'org_ipf_code', 'total_cost', 'direct_cost_amt', 'indirect_cost_amt', 'project_start_month', 'multi_pi_count', 'pi_prior_r01_count', 'renewed']",
+      "expected": "features listed: ['administering_ic', 'study_section', 'ed_inst_type', 'org_state', 'org_country', 'org_ipf_code', 'total_cost', 'direct_cost_amt', 'indirect_cost_amt', 'project_start_month', 'multi_pi_count', 'pi_prior_r01_count']",
+      "passed": true
+    },
+    {
+      "check": "Selected ExPORTER archive members expose the required project and label columns",
+      "observed": "checked archives: 16; per-year audit: [{'fy': 2008, 'member': 'RePORTER_PRJ_C_FY2008.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2009, 'member': 'RePORTER_PRJ_C_FY2009.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2010, 'member': 'RePORTER_PRJ_C_FY2010.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2011, 'member': 'RePORTER_PRJ_C_FY2011.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2012, 'member': 'RePORTER_PRJ_C_FY2012.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2013, 'member': 'RePORTER_PRJ_C_FY2013.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2014, 'member': 'RePORTER_PRJ_C_FY2014.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2015, 'member': 'RePORTER_PRJ_C_FY2015.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2016, 'member': 'RePORTER_PRJ_C_FY2016.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2017, 'member': 'RePORTER_PRJ_C_FY2017.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2018, 'member': 'RePORTER_PRJ_C_FY2018.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2019, 'member': 'RePORTER_PRJ_C_FY2019.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2020, 'member': 'RePORTER_PRJ_C_FY2020.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2021, 'member': 'RePORTER_PRJ_C_FY2021.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2022, 'member': 'RePORTER_PRJ_C_FY2022.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}, {'fy': 2023, 'member': 'RePORTER_PRJ_C_FY2023.csv', 'column_count': 46, 'missing_required': [], 'missing_features': [], 'solicitation_header_candidates_present': ['OPPORTUNITY_NUMBER']}]",
+      "expected": "Every selected member contains CORE_PROJECT_NUM, APPLICATION_TYPE, ACTIVITY, SUPPORT_YEAR, PROJECT_START, AWARD_NOTICE_DATE, ORG_STATE, BUDGET_START and FY",
+      "passed": true
+    },
+    {
+      "check": "Every shipped feature source column appears in at least one annual file",
+      "observed": "feature presence by source column: {'ADMINISTERING_IC': {'missing_years': [], 'present_year_count': 16}, 'STUDY_SECTION': {'missing_years': [], 'present_year_count': 16}, 'ED_INST_TYPE': {'missing_years': [], 'present_year_count': 16}, 'ORG_STATE': {'missing_years': [], 'present_year_count': 16}, 'ORG_COUNTRY': {'missing_years': [], 'present_year_count': 16}, 'ORG_IPF_CODE': {'missing_years': [], 'present_year_count': 16}, 'TOTAL_COST': {'missing_years': [], 'present_year_count': 16}, 'DIRECT_COST_AMT': {'missing_years': [], 'present_year_count': 16}, 'INDIRECT_COST_AMT': {'missing_years': [], 'present_year_count': 16}}",
+      "expected": "Each shipped source column is present in at least one file; absent file-years remain missing and are not filled with zero",
+      "passed": true
+    },
+    {
+      "check": "Solicitation identifier header survey is recorded for every inspected fiscal year",
+      "observed": "years inspected: 16; candidate header names surveyed: ['FOA_NUMBER', 'FUNDING_OPPORTUNITY_NUMBER', 'OPPORTUNITY_NUMBER', 'OPPORTUNITY_NUM', 'FOA']; solicitation headers exposed per fiscal year: {'2008': ['OPPORTUNITY_NUMBER'], '2009': ['OPPORTUNITY_NUMBER'], '2010': ['OPPORTUNITY_NUMBER'], '2011': ['OPPORTUNITY_NUMBER'], '2012': ['OPPORTUNITY_NUMBER'], '2013': ['OPPORTUNITY_NUMBER'], '2014': ['OPPORTUNITY_NUMBER'], '2015': ['OPPORTUNITY_NUMBER'], '2016': ['OPPORTUNITY_NUMBER'], '2017': ['OPPORTUNITY_NUMBER'], '2018': ['OPPORTUNITY_NUMBER'], '2019': ['OPPORTUNITY_NUMBER'], '2020': ['OPPORTUNITY_NUMBER'], '2021': ['OPPORTUNITY_NUMBER'], '2022': ['OPPORTUNITY_NUMBER'], '2023': ['OPPORTUNITY_NUMBER']}",
+      "expected": "All sixteen annual archives are inspected and the solicitation header names each one exposes are recorded verbatim, whether or not the feature is shipped",
+      "passed": true
+    },
+    {
+      "check": "Surveyed solicitation identifier is reported as present rather than described as a source gap",
+      "observed": "fiscal years exposing OPPORTUNITY_NUMBER: [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]; non-empty solicitation values among candidate population rows by fiscal year: {2008: 3679, 2009: 4765, 2010: 3970, 2011: 3530, 2012: 3701, 2013: 3370, 2014: 3613, 2015: 3994, 2016: 4574, 2017: 4583, 2018: 5066, 2019: 4954, 2020: 5162, 2021: 4943, 2022: 5204, 2023: 5010}",
+      "expected": "The publisher files do expose OPPORTUNITY_NUMBER; the frozen feature contract ships twelve award-time metadata columns without the solicitation identifier, so its omission is a declared scope decision and is not a claim that the column is absent",
+      "passed": true
+    },
+    {
+      "check": "Population date fields parse as valid calendar dates",
+      "observed": "candidate rows: 70235; invalid notice dates: 0; invalid project start dates: 0",
+      "expected": "Included first-year records have parseable AWARD_NOTICE_DATE and PROJECT_START values",
+      "passed": true
+    },
+    {
+      "check": "Written CSV files have the identical declared column order",
+      "observed": "written headers: {'public/train.csv': ['award_id', 'award_notice_date', 'administering_ic', 'study_section', 'ed_inst_type', 'org_state', 'org_country', 'org_ipf_code', 'total_cost', 'direct_cost_amt', 'indirect_cost_amt', 'project_start_month', 'multi_pi_count', 'pi_prior_r01_count', 'renewed'], 'public/eval.csv': ['award_id', 'award_notice_date', 'administering_ic', 'study_section', 'ed_inst_type', 'org_state', 'org_country', 'org_ipf_code', 'total_cost', 'direct_cost_amt', 'indirect_cost_amt', 'project_start_month', 'multi_pi_count', 'pi_prior_r01_count', 'renewed'], 'private/holdout.csv': ['award_id', 'award_notice_date', 'administering_ic', 'study_section', 'ed_inst_type', 'org_state', 'org_country', 'org_ipf_code', 'total_cost', 'direct_cost_amt', 'indirect_cost_amt', 'project_start_month', 'multi_pi_count', 'pi_prior_r01_count', 'renewed']}",
+      "expected": "expected columns: ['award_id', 'award_notice_date', 'administering_ic', 'study_section', 'ed_inst_type', 'org_state', 'org_country', 'org_ipf_code', 'total_cost', 'direct_cost_amt', 'indirect_cost_amt', 'project_start_month', 'multi_pi_count', 'pi_prior_r01_count', 'renewed']",
+      "passed": true
+    },
+    {
+      "check": "Released CSVs parse back with a valid date column, populated IDs and a binary target",
+      "observed": "read-back audit: {'public/train.csv': {'rows': 19707, 'unparsed_time_rows': 0, 'blank_id_rows': 0, 'non_binary_target_rows': 0}, 'public/eval.csv': {'rows': 7005, 'unparsed_time_rows': 0, 'blank_id_rows': 0, 'non_binary_target_rows': 0}, 'private/holdout.csv': {'rows': 8581, 'unparsed_time_rows': 0, 'blank_id_rows': 0, 'non_binary_target_rows': 0}}",
+      "expected": "Every released row has a parseable award notice date, a non-empty award_id and a target value of either zero or one",
+      "passed": true
+    },
+    {
+      "check": "New R01 first-year population rows were constructed for each released split",
+      "observed": "candidate rows: 70235; unique population rows: 39875; split counts: {'train': 19707, 'eval': 7005, 'holdout': 8581, 'drift': 4582}; duplicate core rows removed: 2",
+      "expected": "At least one row in train, eval and holdout; the FY2017 drift cohort is held outside the release",
+      "passed": true
+    },
+    {
+      "check": "Constructed target is binary with both outcomes present",
+      "observed": "target values: [0, 1]; positives: 4300; negatives: 35575",
+      "expected": "Target values are a subset of 0 and 1, with at least one positive and one negative row",
+      "passed": true
+    },
+    {
+      "check": "Rows without a fully observed six-year outcome window are dropped instead of labeled zero",
+      "observed": "unknown-window rows dropped: 1; released rows: 39875",
+      "expected": "No released row has an unobserved outcome window; unknown outcomes never become negative labels",
+      "passed": true
+    },
+    {
+      "check": "Stable award identifiers are unique across the release",
+      "observed": "duplicate award_id rows: 0",
+      "expected": "Zero duplicate award_id values",
+      "passed": true
+    },
+    {
+      "check": "train rows fall inside the fixed half-open notice-date window",
+      "observed": "rows: 19707; earliest: 2007-11-05 00:00:00; latest: 2012-09-28 00:00:00",
+      "expected": "half-open window from 2007-10-01 00:00:00 to 2012-10-01 00:00:00",
+      "passed": true
+    },
+    {
+      "check": "eval rows fall inside the fixed half-open notice-date window",
+      "observed": "rows: 7005; earliest: 2012-10-23 00:00:00; latest: 2014-09-27 00:00:00",
+      "expected": "half-open window from 2012-10-01 00:00:00 to 2014-10-01 00:00:00",
+      "passed": true
+    },
+    {
+      "check": "holdout rows fall inside the fixed half-open notice-date window",
+      "observed": "rows: 8581; earliest: 2014-10-24 00:00:00; latest: 2016-09-28 00:00:00",
+      "expected": "half-open window from 2014-10-01 00:00:00 to 2016-10-01 00:00:00",
+      "passed": true
+    },
+    {
+      "check": "Feature administering_ic has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 39875; missing count: 0",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "Feature study_section has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 39875; missing count: 0",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "Feature ed_inst_type has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 32348; missing count: 7527",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "Feature org_state has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 39875; missing count: 0",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "Feature org_country has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 39875; missing count: 0",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "Feature org_ipf_code has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 39875; missing count: 0",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "Feature total_cost has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 39875; missing count: 0",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "Feature direct_cost_amt has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 39875; missing count: 0",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "Feature indirect_cost_amt has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 39857; missing count: 18",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "Feature project_start_month has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 39875; missing count: 0",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "Feature multi_pi_count has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 39875; missing count: 0",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "Feature pi_prior_r01_count has observed values rather than an unresolved empty column",
+      "observed": "non-null count: 39875; missing count: 0",
+      "expected": "At least one non-null value; missing values remain blank and are not replaced with zero",
+      "passed": true
+    },
+    {
+      "check": "total_cost is measured in non-negative USD on the first-year award record",
+      "observed": "non-null count: 39875; negative count: 0; minimum: 1.0; maximum: 11743165.0",
+      "expected": "Non-negative USD amounts; blank cost fields remain missing, not zero",
+      "passed": true,
+      "kind": "unit"
+    },
+    {
+      "check": "direct_cost_amt is measured in non-negative USD on the first-year award record",
+      "observed": "non-null count: 39875; negative count: 0; minimum: 0.0; maximum: 9359117.0",
+      "expected": "Non-negative USD amounts; blank cost fields remain missing, not zero",
+      "passed": true,
+      "kind": "unit"
+    },
+    {
+      "check": "indirect_cost_amt is measured in non-negative USD on the first-year award record",
+      "observed": "non-null count: 39857; negative count: 0; minimum: 0.0; maximum: 3061277.0",
+      "expected": "Non-negative USD amounts; blank cost fields remain missing, not zero",
+      "passed": true,
+      "kind": "unit"
+    },
+    {
+      "check": "Measured direct and indirect cost coverage is recorded for every released fiscal-year cohort",
+      "observed": "per-cohort coverage: {'2008': {'rows': 3712, 'direct_missing': 0, 'indirect_missing': 1}, '2009': {'rows': 4770, 'direct_missing': 0, 'indirect_missing': 3}, '2010': {'rows': 3975, 'direct_missing': 0, 'indirect_missing': 2}, '2011': {'rows': 3540, 'direct_missing': 0, 'indirect_missing': 2}, '2012': {'rows': 3710, 'direct_missing': 0, 'indirect_missing': 2}, '2013': {'rows': 3381, 'direct_missing': 0, 'indirect_missing': 1}, '2014': {'rows': 3624, 'direct_missing': 0, 'indirect_missing': 3}, '2015': {'rows': 4001, 'direct_missing': 0, 'indirect_missing': 1}, '2016': {'rows': 4580, 'direct_missing': 0, 'indirect_missing': 3}}; non-empty but non-numeric amounts by column: {'total_cost': 0, 'direct_cost_amt': 0, 'indirect_cost_amt': 0}",
+      "expected": "Coverage is reported per released fiscal-year cohort exactly as measured in this vintage; empty amounts stay missing rather than zero, and every non-empty amount parses as a number",
+      "passed": true
+    },
+    {
+      "check": "project_start_month is a calendar month between 1 and 12",
+      "observed": "non-null count: 39875; minimum: 1; maximum: 12",
+      "expected": "Integer month values from 1 through 12",
+      "passed": true,
+      "kind": "unit"
+    },
+    {
+      "check": "multi_pi_count counts at least one distinct PI when the PI identifier list is present",
+      "observed": "non-null count: 39875; minimum: 1; maximum: 9",
+      "expected": "Values are positive integers where the PI identifier list is present; a missing list remains missing",
+      "passed": true,
+      "kind": "unit"
+    },
+    {
+      "check": "pi_prior_r01_count is a non-negative count of earlier distinct R01 projects",
+      "observed": "non-null count: 39875; minimum: 0; maximum: 12",
+      "expected": "Non-negative integers; a missing PI identifier list remains missing",
+      "passed": true,
+      "kind": "unit"
+    },
+    {
+      "check": "Positive labels come from type 2 records on the same core project inside the six-year window",
+      "observed": "type 2 source records: 47922; positive rows: 4300; negative rows: 35575",
+      "expected": "Every positive row has a matching APPLICATION_TYPE 2 BUDGET_START strictly after PROJECT_START and no later than six years after it",
+      "passed": true
+    },
+    {
+      "check": "Source application types outside the frozen population are recorded, not used",
+      "observed": "application type counts: {'5': 776296, '1': 299586, '2': 71768, '3': 89885, '7': 21125, '<missing>': 23697, '4': 23119, '9': 896, '6': 3280, '8': 1082}; excluded type counts: {'2': 71768, '3': 89885, '4': 23119, '5': 776296, '7': 21125, '9': 896}",
+      "expected": "Excluded application types may exist elsewhere in the source; only type 1 R01 first-year rows enter the population",
+      "passed": true
+    },
+    {
+      "check": "Source activity codes outside the frozen R01 population are counted by agency prefix",
+      "observed": "activity counts: {'R01': 453946, 'P01': 57082, 'P41': 18605, 'R21': 68261, 'M01': 6326, 'Z01': 3343, 'P30': 61848, 'P50': 30385, 'U01': 37043, 'T32': 30408, 'P20': 18498, 'H79': 11366, 'R03': 18566, 'F32': 20613, 'U54': 29591, 'F31': 25209, 'P51': 4675, 'K08': 15773, 'K23': 17395, 'R37': 10389, 'N01': 16702, 'K01': 15371, 'R43': 11332, 'R44': 13963, 'U19': 19580, 'R13': 9674, 'R25': 11957, 'U10': 4873, 'U62': 2324, 'U58': 5013, 'R56': 5932, 'U79': 3475, 'K99': 7585, 'K24': 3806, 'R24': 4156, 'F30': 9699, 'P60': 2720, 'U65': 1812, 'R15': 4811, 'B09': 1627, 'UL1': 2930, 'U50': 2417, 'U2G': 5295, 'Y01': 2554, 'K02': 1223, 'P42': 3771, 'B01': 1078, 'S06': 876, 'R34': 4115, 'B08': 1095, 'R18': 2044, 'D43': 2566, 'G12': 1007, 'K07': 1376, 'K12': 2622, 'R33': 3221, 'U24': 5155, 'R41': 2984, 'K25': 1291, 'U90': 812, 'R42': 1897, 'K22': 1575, 'X98': 1024, 'H75': 398, 'S10': 2423, 'T35': 1408, 'U87': 784, 'U42': 957, 'U38': 885, 'U51': 1029, 'U13': 558, 'H25': 779, 'K05': 477, 'U52': 667, 'T15': 572, 'R00': 8887, 'DP1': 1486, 'U18': 4118, 'R36': 681, 'H23': 917, 'T34': 1108, 'HR1': 533, 'UR6': 206, 'SC1': 1193, 'U32': 61, 'N02': 2524, 'U17': 504, 'VF1': 404, 'U59': 467, 'UR3': 495, 'X06': 393, 'RL1': 273, 'DP2': 1244, 'U61': 334, 'U48': 701, 'N43': 956, 'U45': 951, 'TL1': 787, 'SC3': 1352, 'H64': 120, 'U49': 77, 'SC2': 795, 'KL2': 947, 'U56': 95, 'P40': 646, 'G11': 378, 'T42': 378, 'U22': 120, 'T90': 286, 'T01': 125, 'R49': 203, 'UD1': 179, 'R90': 256, 'Z02': 25, 'G13': 189, 'T37': 296, 'G08': 164, 'H13': 116, 'U2R': 288, 'T36': 170, 'N44': 363, 'U41': 752, 'K30': 56, 'H28': 95, 'S11': 36, 'G20': 234, 'U60': 523, 'US4': 120, 'U66': 116, 'UC7': 305, 'E11': 87, 'R30': 48, 'U14': 51, 'F33': 57, 'PL1': 111, 'U36': 105, 'HS5': 59, 'U44': 278, 'RC1': 1810, 'U84': 84, 'KD1': 26, 'PN2': 56, 'U88': 87, 'U47': 58, 'S21': 81, 'U1A': 53, 'K18': 150, 'K26': 76, 'U27': 47, 'H62': 7, 'U55': 76, 'T06': 45, 'RL9': 20, 'F05': 23, 'UA1': 4, 'U21': 9, 'T02': 15, 'UH1': 8, 'U53': 44, 'RL5': 113, 'P76': 7, 'R55': 5, 'N03': 279, 'U1V': 13, 'K06': 14, 'UR1': 62, 'U57': 9, 'D71': 84, 'U82': 2, 'RL2': 1, 'T03': 357, 'G94': 8, 'S22': 3, 'F37': 3, 'HD4': 1, 'UC1': 1, 'U83': 2, 'KL1': 5, 'F34': 1, 'T14': 6, 'ZIA': 42814, 'RC2': 911, 'I01': 15895, 'ZIC': 2815, 'ZID': 706, 'ZIE': 429, 'ZIF': 342, 'ZIG': 329, 'ZIH': 227, 'ZIB': 162, 'UH2': 678, 'X99': 26, 'ZIJ': 208, 'UE2': 103, 'ZII': 113, 'C06': 163, 'U34': 151, 'ZIK': 80, 'DP3': 125, 'UC2': 128, 'UM1': 2535, 'RC4': 154, 'RC3': 40, 'UE1': 293, 'S07': 13, 'KM1': 8, 'UH3': 2078, 'DP4': 6, 'UC4': 87, 'U81': 25, 'U1B': 104, 'DP5': 809, 'IK2': 2433, 'H07': 38, 'U43': 27, 'IK1': 167, 'UA5': 3, 'I21': 1253, 'RF1': 1744, 'IP1': 69, 'R28': 12, '<missing>': 319, 'DP7': 90, 'UF1': 106, 'UF2': 168, 'UG1': 2460, 'P2C': 926, 'TL4': 98, 'UM2': 166, 'U2C': 1350, 'U97': 1, 'R35': 14821, 'I50': 233, 'IS1': 265, 'UH4': 111, 'UG3': 1171, 'IK3': 30, 'RM1': 231, 'UG4': 304, 'F99': 720, 'R50': 576, 'OT2': 906, 'FI2': 72, 'SB1': 231, 'R61': 1117, 'K76': 286, 'K43': 352, 'OT3': 116, 'UT2': 30, 'IK6': 679, 'K00': 630, 'R38': 115, 'UT1': 2, 'IU1': 5, 'UE5': 66, 'IK4': 11, 'K38': 13, 'U2F': 222, 'U3R': 2, 'UB1': 3, 'R16': 249}; non-R01 records: 856788; N-prefix records: 20824; Z-prefix records: 51593",
+      "expected": "N-prefixed contract activity codes and Z-prefixed intramural activity codes may exist elsewhere in the source; only ACTIVITY code R01 with APPLICATION_TYPE 1 and SUPPORT_YEAR 1 enters the population, so their presence is recorded rather than aborting the build",
+      "passed": true
+    }
+  ]
+}

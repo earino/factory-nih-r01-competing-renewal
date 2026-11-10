@@ -1,0 +1,85 @@
+{
+  "protocol": "Existing unmodified runner baseline on public validation only; no holdout scoring",
+  "rows": 7005,
+  "metrics": {
+    "full_model": {
+      "auc": 0.6633611632117237,
+      "brier": 0.09558074748502006
+    },
+    "majority_prior": {
+      "auc": 0.5,
+      "brier": 0.09753573340417233
+    },
+    "calendar_identity": {
+      "auc": 0.5154745089711751,
+      "brier": 0.10784755668400582
+    }
+  },
+  "by_year": {
+    "2012": {
+      "rows": 232,
+      "positive_rate": 0.15948275862068967,
+      "metrics": {
+        "full_model": {
+          "auc": 0.65987525987526,
+          "brier": 0.13088358272842934
+        },
+        "majority_prior": {
+          "auc": 0.5,
+          "brier": 0.13601907960732296
+        },
+        "calendar_identity": {
+          "auc": 0.44047124047124053,
+          "brier": 0.14471913220812507
+        }
+      }
+    },
+    "2013": {
+      "rows": 3383,
+      "positive_rate": 0.10877919006798699,
+      "metrics": {
+        "full_model": {
+          "auc": 0.6616663061504074,
+          "brier": 0.0946947082033764
+        },
+        "majority_prior": {
+          "auc": 0.5,
+          "brier": 0.09698605385438985
+        },
+        "calendar_identity": {
+          "auc": 0.5237197166342201,
+          "brier": 0.1051015886851993
+        }
+      }
+    },
+    "2014": {
+      "rows": 3390,
+      "positive_rate": 0.10678466076696165,
+      "metrics": {
+        "full_model": {
+          "auc": 0.6648144025923791,
+          "brier": 0.09404895194322936
+        },
+        "majority_prior": {
+          "auc": 0.5,
+          "brier": 0.09545060939171897
+        },
+        "calendar_identity": {
+          "auc": 0.5132561105556246,
+          "brier": 0.1080644900817541
+        }
+      }
+    }
+  },
+  "majority_accuracy": 0.8905067808708066,
+  "calendar_identity_unseen_rows": 6124,
+  "persistence": "Not applicable; see construction notes",
+  "limitations": [
+    "No uncertainty interval; observed differences do not establish universal headroom"
+  ],
+  "runner_files": {
+    "train.py": "a3c6bcf13735bc85c52129ded68f839090dffdc266ebc3810dc61b2e6ea5e7e8",
+    "validate.py": "b597e7f84fed614e64b4a86fbecbd6ec0145916a24d0d221a796586976418e7b",
+    "validate.sh": "3f06ca48f11c2e05d331b4d8394284925de660c1d4b086d2f8243959e83b7e6d"
+  }
+}

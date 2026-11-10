@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "terms_url": "https://uscode.house.gov/us/usc/119-118/t17/s105/",
+  "terms_sha256": "6c5c94cc76c84785ccfd59b4a10d07a92658d66b9e7ae4873d4ea6c07ca939c7",
+  "documentation_url": "https://report.nih.gov/exporter-data-dictionary",
+  "documentation_sha256": "b1572997c288002e68d711e6e1e39d8fc1dbec0d6b50cc3c19d984dac3e79e66",
+  "quoted_excerpt": "Copyright protection under this title is not available for any work of the United States Government",
+  "excerpt_found": true,
+  "excerpt_match": "contiguous",
+  "scope": "Captured publisher bytes and quote presence; semantic applicability reviewed separately"
+}

@@ -1,0 +1,51 @@
+{
+  "name": "nih-r01-competing-renewal",
+  "description": "When NIH announces a brand-new R01 award, will that project later be continued through a competing-renewal award on the same core project number, or will the project end without one?",
+  "target": "renewed",
+  "positive_label": 1,
+  "id_columns": [
+    "award_id"
+  ],
+  "columns": [
+    "award_id",
+    "award_notice_date",
+    "administering_ic",
+    "study_section",
+    "ed_inst_type",
+    "org_state",
+    "org_country",
+    "org_ipf_code",
+    "total_cost",
+    "direct_cost_amt",
+    "indirect_cost_amt",
+    "project_start_month",
+    "multi_pi_count",
+    "pi_prior_r01_count",
+    "renewed"
+  ],
+  "rows": {
+    "train": 19707,
+    "eval": 7005,
+    "holdout": 8581
+  },
+  "positive_rate": {
+    "train": 0.11508601004719135,
+    "eval": 0.10949321912919344,
+    "holdout": 0.09812376179932408
+  },
+  "split": {
+    "eval": {
+      "end": "2014-10-01T00:00:00.000",
+      "start": "2012-10-01T00:00:00.000"
+    },
+    "holdout": {
+      "end": "2016-10-01T00:00:00.000",
+      "start": "2014-10-01T00:00:00.000"
+    },
+    "train": {
+      "end": "2012-10-01T00:00:00.000",
+      "start": null
+    }
+  },
+  "split_description": "One row per new award; assignment by AWARD_NOTICE_DATE with hard fiscal-year boundaries (Oct 1 - Sep 30) and no shuffling: train FY2008-FY2012, eval FY2013-FY2014, holdout FY2015-FY2016; FY2017 is held back as a post-holdout drift check and never used for tuning. No calendar embargo gap is imposed, because every feature for a row is restricted to records dated strictly before that row's notice date, and every label uses only post-decision records of that same core project; instead right-censoring is enforced by requiring the full 6-year window to be observed at the data cutoff. Identity/aggregate features additionally obey the rule that they may use only cohorts whose outcome window closed before the decision instant, so a later row can never disclose an earlier row's target."
+}
