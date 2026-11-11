@@ -1,0 +1,321 @@
+{
+  "artifact_version": "201d2e0b901bd8ad59d1260eb09b4b0d166abc4cf7ba476131bd46f77a7a1cbe",
+  "assets": {
+    "LICENSE-EVIDENCE.json": {
+      "bytes": 622,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/LICENSE-EVIDENCE.json",
+      "hf_path": "LICENSE-EVIDENCE.json",
+      "sha256": "1f81314f23243a17ab671097b39b7ed73eb163143b6d486f69636312cfb10370"
+    },
+    "LICENSE.md": {
+      "bytes": 1083,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/LICENSE.md",
+      "hf_path": "LICENSE.md",
+      "sha256": "de34a28eca4b6a0fe1dc23771c3e678de3f5df805799a64fa07d3a719664188a"
+    },
+    "README.md": {
+      "bytes": 7850,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/README.md",
+      "hf_path": "README.md",
+      "sha256": "2ea38d83d1468fe770198455afd5b556f11ec9c938e80b67d1de550e14ac76a1"
+    },
+    "SOURCES.json": {
+      "bytes": 5195,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/SOURCES.json",
+      "hf_path": "SOURCES.json",
+      "sha256": "db9a6abc003d46607a799e569aceb7dbe811af2649f0ce35cb48b5ecf1f2d2c3"
+    },
+    "evaluation.json": {
+      "bytes": 2289,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/evaluation.json",
+      "hf_path": "evaluation.json",
+      "sha256": "eeda01be5d98fc96e8f5c86dba33456103c65082d7e6e3836ee1bd9fc5183650"
+    },
+    "extract__meta.json": {
+      "bytes": 1988,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/extract__meta.json",
+      "hf_path": "extract/meta.json",
+      "sha256": "f2683cc5300b9d372536b1931a32392e4bc76c761a242b47a8b2440f51c830bc"
+    },
+    "extract__private__holdout.csv": {
+      "bytes": 974393,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/extract__private__holdout.csv",
+      "hf_path": "extract/private/holdout.csv",
+      "sha256": "37943389a16cf5c2fb68f746dacc2dd18a39fc44c3de8c4367f7725ab0ae0ed6"
+    },
+    "extract__public__eval.csv": {
+      "bytes": 795088,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/extract__public__eval.csv",
+      "hf_path": "extract/public/eval.csv",
+      "sha256": "5d257ecddedcbcdcc09d19ca45bbabac75b2715669e34f8bc85a528658ff55fd"
+    },
+    "extract__public__train.csv": {
+      "bytes": 2235798,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/extract__public__train.csv",
+      "hf_path": "extract/public/train.csv",
+      "sha256": "2db27f1aa5e8bade1ee8cf922aa2577eb562173fb9f989cddc834d13f7feb402"
+    },
+    "extract__quality.json": {
+      "bytes": 22929,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/extract__quality.json",
+      "hf_path": "extract/quality.json",
+      "sha256": "f607ae09d5700b7513a20c7a8058c7b4cb88f38aa1806c5231ec4205ad50ab24"
+    },
+    "get_dataset.py": {
+      "bytes": 3680,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/get_dataset.py",
+      "hf_path": "get_dataset.py",
+      "sha256": "fad89222d50f9d9709225c34909be74c591df409c08b8b5951eba9d3cadfdd48"
+    },
+    "qualification.json": {
+      "bytes": 17511,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/qualification.json",
+      "hf_path": "qualification.json",
+      "sha256": "7bd4e9f247b99fee4eadb0f9c1b95da59d5b19704a5ec0f2f2c2cfe35fe2bb83"
+    },
+    "reproduction__LICENSE-CC0-1.0.txt": {
+      "bytes": 7048,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__LICENSE-CC0-1.0.txt",
+      "hf_path": "reproduction/LICENSE-CC0-1.0.txt",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    "reproduction__LICENSE-MIT.txt": {
+      "bytes": 1124,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__LICENSE-MIT.txt",
+      "hf_path": "reproduction/LICENSE-MIT.txt",
+      "sha256": "56b932ff064e5da113ae10175c8546325f64f26e1ece71683ffcbf8b2304fe1c"
+    },
+    "reproduction__artifact_scrub.py": {
+      "bytes": 11369,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__artifact_scrub.py",
+      "hf_path": "reproduction/artifact_scrub.py",
+      "sha256": "8c663253e691a7b8751f9c853b40a3752a833360caafb1ea8e8f534e64af4b68"
+    },
+    "reproduction__build.py": {
+      "bytes": 28819,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__build.py",
+      "hf_path": "reproduction/build.py",
+      "sha256": "46b9979f65b65115f5a34c2fbe814cce1756a31cc9bf96371702ab78f230aa00"
+    },
+    "reproduction__construction.json": {
+      "bytes": 27155,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__construction.json",
+      "hf_path": "reproduction/construction.json",
+      "sha256": "d3df8922d9aeabd6631259f47d22436b237e2bebd07082d94c20dd682b744775"
+    },
+    "reproduction__dataset_package.py": {
+      "bytes": 7927,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__dataset_package.py",
+      "hf_path": "reproduction/dataset_package.py",
+      "sha256": "c2364defe58dcc99322be59a1bb04894ce00e823ce37afeb37bc31012f744327"
+    },
+    "reproduction__dataset_run.py": {
+      "bytes": 12381,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__dataset_run.py",
+      "hf_path": "reproduction/dataset_run.py",
+      "sha256": "8085fae14d6e93b852e692e18c1ef72113a3601f48f78901b6d1ae6db278de57"
+    },
+    "reproduction__get_dataset.py": {
+      "bytes": 3680,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__get_dataset.py",
+      "hf_path": "reproduction/get_dataset.py",
+      "sha256": "fad89222d50f9d9709225c34909be74c591df409c08b8b5951eba9d3cadfdd48"
+    },
+    "reproduction__leakage_battery.py": {
+      "bytes": 17379,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__leakage_battery.py",
+      "hf_path": "reproduction/leakage_battery.py",
+      "sha256": "adbf7ee0aca0012b78cc1f1e4aeb968a23717cae30f66a02e080215e75f830e3"
+    },
+    "reproduction__provenance.json": {
+      "bytes": 573,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__provenance.json",
+      "hf_path": "reproduction/provenance.json",
+      "sha256": "768bebe8c4b2a024625465fb8453c587e61691707251168963ed7f1851a9b476"
+    },
+    "reproduction__qualify_dataset.py": {
+      "bytes": 66067,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__qualify_dataset.py",
+      "hf_path": "reproduction/qualify_dataset.py",
+      "sha256": "bff6d43d0904182e2612c32bab702e41addbf389904a236c209e78be39e37a6b"
+    },
+    "reproduction__recovery_recipes.py": {
+      "bytes": 17609,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__recovery_recipes.py",
+      "hf_path": "reproduction/recovery_recipes.py",
+      "sha256": "f64c542fcda232169c95ace17421b45275194b934938c0ea4c9b68e6f844ad0e"
+    },
+    "reproduction__requirements.txt": {
+      "bytes": 160,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__requirements.txt",
+      "hf_path": "reproduction/requirements.txt",
+      "sha256": "5c72f3268174d20364624f76680e189c408a05dba2e7b8cfe12d077b3865e7f0"
+    },
+    "reproduction__source.json": {
+      "bytes": 19974,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__source.json",
+      "hf_path": "reproduction/source.json",
+      "sha256": "25959e6523f8b801abe90f5e7cb4c7a1f4d0b5fdb29a8afe2a478fe369dd9208"
+    },
+    "reproduction__source_io.py": {
+      "bytes": 5607,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__source_io.py",
+      "hf_path": "reproduction/source_io.py",
+      "sha256": "0c60eed4968cd342148efbaac7e4fa98f00708d8e6c14c0929928687b9af1ea3"
+    },
+    "reproduction__train.py": {
+      "bytes": 2500,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__train.py",
+      "hf_path": "reproduction/train.py",
+      "sha256": "a3c6bcf13735bc85c52129ded68f839090dffdc266ebc3810dc61b2e6ea5e7e8"
+    },
+    "reproduction__validate.py": {
+      "bytes": 1277,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__validate.py",
+      "hf_path": "reproduction/validate.py",
+      "sha256": "b597e7f84fed614e64b4a86fbecbd6ec0145916a24d0d221a796586976418e7b"
+    },
+    "reproduction__validate.sh": {
+      "bytes": 482,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/reproduction__validate.sh",
+      "hf_path": "reproduction/validate.sh",
+      "sha256": "3f06ca48f11c2e05d331b4d8394284925de660c1d4b086d2f8243959e83b7e6d"
+    },
+    "source-checks.json": {
+      "bytes": 22801,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/source-checks.json",
+      "hf_path": "source-checks.json",
+      "sha256": "3317c71fd35286db864a5bedd1bf08656963d430d0ec42df2c8c70902c2b4483"
+    },
+    "source-snapshot.tar.gz": {
+      "bytes": 823172356,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/source-snapshot.tar.gz",
+      "hf_path": "source-snapshot.tar.gz",
+      "sha256": "d2cffd1ab288946051fa52ff54bd5c9428af293a710fe09ea3fbdcc8e6843b03"
+    },
+    "verify_dataset.py": {
+      "bytes": 1276,
+      "download": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/download/v-a00c2ae77f5ae167/verify_dataset.py",
+      "hf_path": "verify_dataset.py",
+      "sha256": "f4a4bb7f565cdbd075c520621f881876b491eaed91a5e6e70afb31e4753f9834"
+    }
+  },
+  "baseline": {
+    "metrics": {
+      "Validation calendar_identity auc": 0.5154745089711751,
+      "Validation calendar_identity brier": 0.10784755668400582,
+      "Validation full_model auc": 0.6633611632117237,
+      "Validation full_model brier": 0.09558074748502006,
+      "Validation majority_prior auc": 0.5,
+      "Validation majority_prior brier": 0.09753573340417233
+    },
+    "scope": "Existing unmodified runner baseline on public validation only; no holdout scoring"
+  },
+  "configs": [],
+  "dataset": "nih-r01-competing-renewal",
+  "documents": [
+    [
+      "README.md",
+      "Loading and reproduction"
+    ],
+    [
+      "evaluation.json",
+      "Measured baseline"
+    ],
+    [
+      "LICENSE.md",
+      "Licence and attribution"
+    ]
+  ],
+  "domain": "U.S. National Institutes of Health, Office of Extramural Research (RePORT/RePORTER ExPORTER)",
+  "evaluation_use": "retrospective_research",
+  "github_repository": "earino/factory-nih-r01-competing-renewal",
+  "hf_repository": "earino/factory-nih-r01-competing-renewal",
+  "licenses": {
+    "attribution": "No credit is legally required; suggested courtesy line (not a condition of use): \"National Institutes of Health, RePORTER/ExPORTER (reporter.nih.gov)\"",
+    "citation": "",
+    "code": "MIT",
+    "compilation_scope": "Our additional compilation rights only; upstream terms remain in force.",
+    "data_compilation": "CC0-1.0",
+    "source_data": "U.S. Government work under 17 U.S.C. 105 - not subject to copyright protection in the United States; no publisher licence, registration or account required"
+  },
+  "limitations": [
+    "Retrospective snapshot, not a historical operational feed: each annual file reflects the administrative state of the records when that file was created, so later revisions (amount changes, no-cost extensions, PI moves) appear in the vintage you download; this demonstrates that the outcome is documented, not that an analyst could have queried these exact rows on the notice date.",
+    "PROJECT_END is excluded from features because NIH extends it on renewal; TOTAL_COST may also be administratively revised, so amounts are treated as award-time values rather than audited first-year outlays.",
+    "The outcome is partly behavioral: a renewal exists only if the investigator applied, so the label measures continuation of federal funding rather than scientific merit alone, and it co-moves with appropriations and institute paylines across fiscal years.",
+    "Correlated observations: prolific investigators and large institutions contribute many rows, so rows are not independent draws; cluster-aware evaluation by PI and institution is advisable and the identity baselines must be reported.",
+    "PI_ID values are not perfectly stable (accounts split or merge over time; contract and subproject cases are known to vary), so PI histories carry linkage noise.",
+    "Direct and indirect cost fields are only populated from FY2012 onward, creating systematic missingness for the earliest training cohorts.",
+    "Legal basis is U.S. law and territorial: 17 U.S.C. 105 removes U.S. copyright in these agency-compiled records; it is not a worldwide dedication, and no foreign rights are asserted or waived.",
+    "Grantee-supplied text (abstracts, public health relevance statements, project titles) may carry third-party rights and is excluded: it is neither used as a feature nor redistributed. The derived release is award-level administrative metadata only, with PI identifiers pseudonymized.",
+    "Only linked via the same agency's own files (project and, if used, PI/organization lookups); no external registry, credit, or personal data is joined.",
+    "Retrospective snapshot, not a historical operational feed: each annual file reflects the administrative state of records when that file was created, so later revisions, amount changes, no-cost extensions and PI moves appear in the downloaded vintage.",
+    "Historical first-year availability of each field is assumed from the current publisher data dictionary and annual files, not verified against an archived vintage.",
+    "Actual ExPORTER publication timestamps are not established, so timing.observations is empty rather than filled with invented dates.",
+    "PROJECT_END is excluded from features because NIH extends it on renewal; using it would leak the outcome.",
+    "The outcome is partly behavioral: a renewal exists only if the investigator applied, so the label measures continuation of federal funding rather than scientific merit alone and co-moves with appropriations and institute paylines.",
+    "Rows are not independent draws: prolific investigators and large institutions contribute many rows, so cluster-aware evaluation by organization and investigator history is advisable.",
+    "PI identifier values are not perfectly stable over time, so PI histories carry linkage noise.",
+    "Cost amounts: NIH's data dictionary describes direct and indirect cost amounts as available only for awards funded in FY2012 onward, but the current-vintage annual files used here populate the pre-FY2012 population cohorts as well (measured in the last release: no blank direct amounts and only a handful of blank indirect amounts across released rows). The descriptor now follows the measured vintage; blanks still remain missing rather than zero.",
+    "Prior R01 history is left-censored before the first downloaded annual file, so early-cohort prior-count features may undercount older awards.",
+    "The solicitation identifier (OPPORTUNITY_NUMBER, the FOA number) is exposed in every audited annual ExPORTER project file, but it is not shipped: the frozen feature contract for this task is the twelve award-time metadata columns, so omitting the solicitation identifier is a declared scope decision rather than a claim that the publisher files lack the column.",
+    "No label-derived PI or organization renewal-rate feature is shipped; this is a completed check, not an unresolved item.",
+    "The legal basis is U.S. law and territorial: 17 U.S.C. 105 removes U.S. copyright in these agency-compiled records; it is not a worldwide dedication.",
+    "Grantee-supplied text such as abstracts, titles and public health relevance statements is excluded from features and release.",
+    "The discovery-time provenance strings in the frozen source block (its limitations list, its construction.source_examples note and its reason summary) are preserved verbatim from source discovery and are not the operative evaluation descriptor. Two of those sentences describe an earlier snapshot: the claim that direct and indirect cost amounts are blank before FY2012 is superseded by the measured current-vintage statement above, and the phrase describing a roughly balanced label is superseded by the measured roughly eleven percent positive rate. PI identifiers are used only to derive counts and are never shipped. No built row or feature depends on those provenance sentences.",
+    "No uncertainty interval; observed differences do not establish universal headroom"
+  ],
+  "post": {
+    "paragraphs": [
+      "When NIH announces a brand-new R01 award, will that project later be continued through a competing-renewal award on the same core project number, or will the project end without one?",
+      "Population: Extramural R01 awards in the annual NIH ExPORTER project files with APPLICATION_TYPE code 1 (new), SUPPORT_YEAR code 1, ACTIVITY code R01, non-missing PROJECT_START, AWARD_NOTICE_DATE and ORG_STATE, and AWARD_NOTICE_DATE from 2007-10-01 through 2017-09-30 (federal fiscal years 2008-2017). The released splits ship fiscal years 2008-2012 to train, 2013-2014 to eval, and 2015-2016 to holdout; the FY2017 cohort is held back outside the three release files as a post-holdout drift audit. Excludes other application types, contracts with N-prefix codes, intramural Z-prefix codes, and projects whose first-year record is missing. Eligibility uses only fields visible on the award record at the decision instant.",
+      "Target: y = 1 if the same CORE_PROJECT_NUM has any award record with APPLICATION_TYPE = 2 (competing continuation / competing renewal) whose BUDGET_START is strictly after the initial PROJECT_START and no later than initial PROJECT_START + 6 years; y = 0 if no such record exists and the cohort's full 6-year window is observed in the data cutoff. Rows whose window is not fully observed are dropped, never labeled 0.",
+      "Prediction time: The award notice date (AWARD_NOTICE_DATE) printed on the project first-year record, the moment the new award becomes public. Features use only fields printed on that first-year record or histories built from R01 award records with AWARD_NOTICE_DATE strictly earlier than the row notice date.",
+      "Splits: One row per new award; assignment by AWARD_NOTICE_DATE with hard fiscal-year boundaries (Oct 1 - Sep 30) and no shuffling: train FY2008-FY2012, eval FY2013-FY2014, holdout FY2015-FY2016; FY2017 is held back as a post-holdout drift check and never used for tuning. No calendar embargo gap is imposed, because every feature for a row is restricted to records dated strictly before that row's notice date, and every label uses only post-decision records of that same core project; instead right-censoring is enforced by requiring the full 6-year window to be observed at the data cutoff. Identity/aggregate features additionally obey the rule that they may use only cohorts whose outcome window closed before the decision instant, so a later row can never disclose an earlier row's target.",
+      "Outcome horizon: 6 years from the initial PROJECT_START (typical R01 project periods are 3-5 years, so the first competing renewal normally begins in year 4-6); cohorts through FY2017 are fully observed using files through FY2023.",
+      "Inputs: administering_ic: Two-character NIH institute or center code administering the award; captures institute-specific continuation norms and paylines.; study_section: Review panel code that evaluated the funded application; proxies field and review culture. The panel name text is not shipped to avoid duplicate text.; ed_inst_type: NIH grouping of the grantee organization component type, such as medical school, other college, hospital or business.; org_state: Two-letter grantee business-office state; institutional location and clustering. Required non-missing for population eligibility.; org_country: Grantee business-office country; institutional location and foreign or domestic status.; org_ipf_code: Stable NIH institution identifier for the grantee organization; institutional capacity and high-cardinality identity control.; total_cost: First-year total award amount, direct plus indirect; treated as an award-time value because later administrative revisions are possible.; direct_cost_amt: First-year direct cost component; indirect share proxies institutional facilities and administrative rate.; indirect_cost_amt: First-year indirect cost component; proxies institutional facilities and administrative rate.; project_start_month: Calendar month of PROJECT_START, giving within-year timing while remaining visible at notice.; multi_pi_count: Number of distinct PI identifiers on the first-year record; single-PI versus multi-PI structure.; pi_prior_r01_count: Maximum number of distinct earlier R01 core projects held by any listed PI, measuring established versus first-time R01 holders without using labels."
+    ],
+    "title": "NIH R01 Competing Renewal"
+  },
+  "publication_commits": {
+    "github": "19e233caa30c4acc5b9eb94d3e76d9dc20f55719",
+    "huggingface": "28f0f720337daf983516fcdd811481b763e6cd1f"
+  },
+  "qualification": {
+    "gate_version": "1.6.1",
+    "result": "PASSED"
+  },
+  "record_sha256": "37a5e1ec9bf74bef9b0e55bb60083f226b8265894679138599636033e43feaf7",
+  "release_date": "2026-11-10",
+  "release_schema": "factory-1",
+  "release_tag": "v-a00c2ae77f5ae167",
+  "schema_version": 1,
+  "site_revision": 2,
+  "source": {
+    "name": "U.S. National Institutes of Health, Office of Extramural Research (RePORT/RePORTER ExPORTER)",
+    "url": "https://report.nih.gov/exporter-data-dictionary"
+  },
+  "splits": {
+    "eval": {
+      "rows": 7005
+    },
+    "holdout": {
+      "rows": 8581
+    },
+    "train": {
+      "rows": 19707
+    }
+  },
+  "summary": "When NIH announces a brand-new R01 award, will that project later be continued through a competing-renewal award on the same core project number, or will the project end without one?",
+  "task_type": "binary-classification",
+  "title": "NIH R01 Competing Renewal",
+  "urls": {
+    "catalog": "https://earino.github.io/dataset-factory-site/",
+    "github": "https://github.com/earino/factory-nih-r01-competing-renewal",
+    "github_release": "https://github.com/earino/factory-nih-r01-competing-renewal/releases/tag/v-a00c2ae77f5ae167",
+    "huggingface": "https://huggingface.co/datasets/earino/factory-nih-r01-competing-renewal",
+    "huggingface_version": "https://huggingface.co/datasets/earino/factory-nih-r01-competing-renewal/tree/v-a00c2ae77f5ae167",
+    "version": "https://earino.github.io/factory-nih-r01-competing-renewal/versions/v-a00c2ae77f5ae167/",
+    "website": "https://earino.github.io/factory-nih-r01-competing-renewal/"
+  }
+}

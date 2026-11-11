@@ -275,7 +275,7 @@
       "Outcome horizon: 6 years from the initial PROJECT_START (typical R01 project periods are 3-5 years, so the first competing renewal normally begins in year 4-6); cohorts through FY2017 are fully observed using files through FY2023.",
       "Inputs: administering_ic: Two-character NIH institute or center code administering the award; captures institute-specific continuation norms and paylines.; study_section: Review panel code that evaluated the funded application; proxies field and review culture. The panel name text is not shipped to avoid duplicate text.; ed_inst_type: NIH grouping of the grantee organization component type, such as medical school, other college, hospital or business.; org_state: Two-letter grantee business-office state; institutional location and clustering. Required non-missing for population eligibility.; org_country: Grantee business-office country; institutional location and foreign or domestic status.; org_ipf_code: Stable NIH institution identifier for the grantee organization; institutional capacity and high-cardinality identity control.; total_cost: First-year total award amount, direct plus indirect; treated as an award-time value because later administrative revisions are possible.; direct_cost_amt: First-year direct cost component; indirect share proxies institutional facilities and administrative rate.; indirect_cost_amt: First-year indirect cost component; proxies institutional facilities and administrative rate.; project_start_month: Calendar month of PROJECT_START, giving within-year timing while remaining visible at notice.; multi_pi_count: Number of distinct PI identifiers on the first-year record; single-PI versus multi-PI structure.; pi_prior_r01_count: Maximum number of distinct earlier R01 core projects held by any listed PI, measuring established versus first-time R01 holders without using labels."
     ],
-    "title": "Will a newly awarded NIH R01 project be continued through a competing renewal? Predicting federal research-funding continuation from award-time attributes"
+    "title": "NIH R01 Competing Renewal"
   },
   "publication_commits": {
     "github": "19e233caa30c4acc5b9eb94d3e76d9dc20f55719",
@@ -285,12 +285,12 @@
     "gate_version": "1.6.1",
     "result": "PASSED"
   },
-  "record_sha256": "40ecf3ab25feb3a62a039666aadf96209e02fb7a1780bd095292894def868afe",
+  "record_sha256": "37a5e1ec9bf74bef9b0e55bb60083f226b8265894679138599636033e43feaf7",
   "release_date": "2026-11-10",
   "release_schema": "factory-1",
   "release_tag": "v-a00c2ae77f5ae167",
   "schema_version": 1,
-  "site_revision": 1,
+  "site_revision": 2,
   "source": {
     "name": "U.S. National Institutes of Health, Office of Extramural Research (RePORT/RePORTER ExPORTER)",
     "url": "https://report.nih.gov/exporter-data-dictionary"
@@ -308,7 +308,7 @@
   },
   "summary": "When NIH announces a brand-new R01 award, will that project later be continued through a competing-renewal award on the same core project number, or will the project end without one?",
   "task_type": "binary-classification",
-  "title": "Will a newly awarded NIH R01 project be continued through a competing renewal? Predicting federal research-funding continuation from award-time attributes",
+  "title": "NIH R01 Competing Renewal",
   "urls": {
     "catalog": "https://earino.github.io/dataset-factory-site/",
     "github": "https://github.com/earino/factory-nih-r01-competing-renewal",
